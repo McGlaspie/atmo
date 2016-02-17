@@ -1,0 +1,45 @@
+<shader>
+	
+	<inputs>
+		<input name="albedoMap" type="texture" address="wrap" />
+		<input name="normalMap" type="texture" address="wrap" />
+		<input name="amount" type="float"/>
+		<input name="origin" type="float3"/>
+		<input name="maxRadius" type="float"/>
+		<input name="infestationScale" type="float"/>
+	</inputs>
+	
+	<params>
+		<param name="osPosition">true</param>
+		<param name="wsPosition">true</param>
+	</params>
+	
+	<code>
+	<![CDATA[
+		void MaterialShader(in Material_Input input, inout Material material)
+		{
+			
+			float2 texCoord = input.osPosition.xz * 0.30;
+
+            const float growDist      = 0.8;
+            float blobDist            = length(input.wsPosition - origin);
+            float infestDist          = amount * maxRadius;
+            float scale               = saturate( (infestDist - blobDist) / growDist );
+
+			float3 albedo     = tex2D(albedoMap, texCoord);
+			float3 tsNormal   = tex2D(normalMap, texCoord);
+			
+			float2 d = 2 * (input.texCoord - 0.5) / scale;
+			float opacity = 1 - dot(d, d);
+			
+			float a = (1 - length(albedo)) * 0.5;
+			
+			material.albedo 	= albedo;
+			material.tsNormal   = tsNormal * 2 - 1;
+			material.opacity 	= saturate( (opacity - a) * 8 );
+			
+		}
+	]]>
+	</code>
+
+</shader>

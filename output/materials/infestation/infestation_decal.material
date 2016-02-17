@@ -1,0 +1,4 @@
+shader = "materials/infestation/infestation_decal.surface_shader"
+albedoMap = "materials/infestation/infestation.dds"
+normalMap = "materials/infestation/infestation_normal.dds"
+surface = "organic"

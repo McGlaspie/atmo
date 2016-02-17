@@ -1,0 +1,8 @@
+modEntry = {
+	Client = nil,
+	Server = nil,
+	Predict = nil,
+	Shared = "lua/PMShared.lua",
+	FileHooks = "lua/PMHooks.lua",
+	Priority = 1
+}

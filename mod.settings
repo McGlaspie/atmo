@@ -1,0 +1,16 @@
+name        = "Atmospheric Territories"
+source_dir  = "source"
+output_dir  = "output"
+description = [=[This mod aims to revise all environment lighting associated with power nodes. In addition to eliminating the red lighting, it takes things a few steps further. The lighting for each location is now more dynamic and changes based on which team controls it (based on the number of built structures). Lighting now changes even when power nodes are Unsocketed. As aliens encroach into the map and spread infestation, the lighting for those areas will slowly "bleed" off until it is much darker than normal. The designed intent is to make the Territorial-Boundires very clear and distinct, increasing the atomosphric qualities of NS2 and making it easier / more obvious for Rookies to realize they're in hostile territory. 
+
+This effect creates clear delineations between Marine and Alien controlled territory. Proceed with caution Marines, grab a adventure-buddy and turn those flashlights on, you’ll need them. 
+
+Disclaimer: This mod is definitely a work-in-progress and doesn't promise feature perfect qualities. It's effectively just prototyping an idea. 
+
+
+Known Issues:
+- General mod incompatibility (likely won't work with other mods, for the time being) 
+- Alien-Lighting does not change per client options (will be added later) 
+- Lighting changes can been seen by Commanders without any LOS (top priorty to fix)]=]
+image       = "preview.jpg"
+publish_id = "2288e458"

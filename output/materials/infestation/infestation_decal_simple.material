@@ -1,0 +1,6 @@
+shader = "shaders/Decal.surface_shader"
+albedoMap = "materials/infestation/infestation.dds"
+normalMap = "materials/infestation/infestation_normal.dds"
+opacityMap = "materials/infestation/infestation_opacity.dds"
+specularMap = "cinematics/vfx_materials/decals/alien_blood_01_specular.dds"
+surface = "organic"
